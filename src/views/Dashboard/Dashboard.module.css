@@ -7,3 +7,10 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+    padding: 20px 0px;
+}
