@@ -10,4 +10,5 @@ body {
   font-family: "PT Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --theme-green:#98B9AB;
 }
