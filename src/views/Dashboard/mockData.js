@@ -21,4 +21,19 @@ export const nationalAverageData = [
     4010, 3600, 2900, 3550, 3800, 2900, 3000, 3500, 4000, 3700, 3550, 3800
 ]
 
+export const managerQuarterData = [
+    500, 390, 670, 600, 780, 440, 600, 680, 550, 475, 700, 795
+]
+
+export const nationalAverageQuarterData = [
+    600, 400, 600, 550, 700, 500, 600, 700, 500, 550, 600, 700
+]
+
+
+//---Labels---//
+
 export const yearLabels = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+export const quarterLabels = ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11", "Week 12"];
+
+//---Labels---//

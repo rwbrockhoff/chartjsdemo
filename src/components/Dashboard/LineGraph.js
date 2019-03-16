@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Chart from "chart.js";
 import classes from "./LineGraph.module.css";
+var myLineChart;
 
 //--Chart Style Options--//
 Chart.defaults.global.defaultFontFamily = "'PT Sans', sans-serif"
@@ -9,32 +10,37 @@ Chart.defaults.global.legend.display = false;
 
 export default class LineGraph extends Component {
     chartRef = React.createRef();
-    
+
     componentDidMount() {
-        const {data, nationalAverageData, labels} = this.props;
+        this.buildChart();
+    }
+
+    componentDidUpdate() {
+        this.buildChart();
+    }
+
+    buildChart = () => {
         const myChartRef = this.chartRef.current.getContext("2d");
-        const {width: graphWidth} = myChartRef.canvas;
+        const { data, average, labels } = this.props;
+        console.log(data, average)
 
-        var gradientLine = myChartRef
-            .createLinearGradient(0, 0, graphWidth * 2, 0);
-        gradientLine.addColorStop(0, "#FF006E");
-        gradientLine.addColorStop(1, "#F46036");
+        if (typeof myLineChart !== "undefined") myLineChart.destroy();
 
-        new Chart(myChartRef, {
+        myLineChart = new Chart(myChartRef, {
             type: "line",
             data: {
                 //Bring in data
                 labels: labels,
                 datasets: [
                     {
-                        label: "Sales", 
+                        label: "Sales",
                         data: data,
                         fill: false,
-                        borderColor: gradientLine
+                        borderColor: "#6610f2"
                     },
                     {
-                        label: "National Average", 
-                        data: nationalAverageData,
+                        label: "National Average",
+                        data: average,
                         fill: false,
                         borderColor: "#E0E0E0"
                     }
@@ -42,10 +48,11 @@ export default class LineGraph extends Component {
             },
             options: {
                 //Customize chart options
-                
+
             }
         });
     }
+
     render() {
         return (
             <div className={classes.graphContainer}>

@@ -21,6 +21,37 @@ header > img {
 .buttonContainer {
     display: flex;
     justify-content: space-around;
-    width: 50vw;
-    padding: 20px 0px;
+    width: fit-content;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+.buttonContainer button {
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    font-family: "PT Sans";
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 2px 10px;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    outline-color: white;
+}
+
+.buttonContainer button:hover {
+    background: rgb(255, 255, 255, 0.1);
+    padding: 2px 20px;
+}
+
+button[value=annual] { 
+   border-right: none;
+   border-top-right-radius: 0;
+   border-bottom-right-radius: 0;
+}
+
+button[value=lastquarter] { 
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
