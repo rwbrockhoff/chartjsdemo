@@ -1,6 +1,8 @@
 {
   "name": "chartjs_demo",
   "version": "0.1.0",
+  "description": "Walkthrough demo for ChartJS in React",
+  "author": "Ryan Brockhoff <brockhoffrw@gmail.com>",
   "private": true,
   "dependencies": {
     "chart.js": "^2.8.0",
