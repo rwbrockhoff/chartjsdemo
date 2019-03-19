@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classes from "./Dashboard.module.css";
 import LineGraph from "../../components/Dashboard/LineGraph";
 import chartIcon from "../../assets/chart-icon.svg";
-import { managerData, nationalAverageData, yearLabels, managerQuarterData, nationalAverageQuarterData, quarterLabels } from "./mockData";
+import { managerData, nationalAverageData, yearLabels, managerQuarterData, nationalAverageQuarterData, quarterLabels } from "../../mockData";
 
 export default class Dashboard extends Component {
     state = {

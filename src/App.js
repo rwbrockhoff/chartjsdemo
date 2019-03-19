@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Dashboard from "./views/Dashboard/Dashboard";
+import YourDashboard from "./views/YourDashboard/YourDashboard";
 
 class App extends Component {
   render() {
     return (
-      <Dashboard />
+      <YourDashboard />
     );
   }
 }
